@@ -72,4 +72,10 @@
     <!-- Annoying Notifications -->
     <string name="notification_sound_vib_screen_on_title">Annoying Notifications</string>
     <string name="notification_sound_vib_screen_on_summary">Play sound and vibration for notifications when screen is on</string>
+
+    <!-- Torch Power button gestures -->
+    <string name="torch_power_button_gesture_title">Toggle torch when screen off</string>
+    <string name="torch_power_button_gesture_none">Disabled</string>
+    <string name="torch_power_button_gesture_dt">Double press power button (Disables Quickly open camera feature and adds 170ms wakeup delay)</string>
+    <string name="torch_power_button_gesture_lp">Long press power button</string>
 </resources>

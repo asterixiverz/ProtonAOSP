@@ -59,6 +59,10 @@ PRODUCT_PACKAGES += \
     libvndfwk_detect_jni.qti.vendor \
     libqti_vndfwk_detect.vendor
 
+# Charger Images
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,vendor/proton/charger,$(TARGET_COPY_OUT_PRODUCT)/etc/res)
+
 # AOSP userdebug/eng CLI tools
 PRODUCT_PACKAGES += \
     arping \

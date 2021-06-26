@@ -15,6 +15,10 @@
 # Vendor overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/proton/overlay
 
+# Navbar
+PRODUCT_PACKAGES += \
+    NavigationBarNoHintOverlay
+
 # Framework overlay needs to be a RRO
 PRODUCT_ENFORCE_RRO_TARGETS += framework-res
 

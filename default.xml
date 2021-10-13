@@ -1107,4 +1107,12 @@
 
   <!-- ProtonAOSP changes -->
   <include name="proton.xml"/>
+
+  <!-- CAF  -->
+  <include name="remove.xml"/>
+  <include name="caf.xml"/>
+  
+  <!-- Device Stuff -->
+  <include name="fog.xml" />
+
 </manifest>

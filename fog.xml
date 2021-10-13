@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remove-project name="platform/vendor/qcom-opensource/cryptfs_hw" />
+  <remove-project name="platform/hardware/qcom/thermal" />
+  <remove-project name="android_vendor_qcom_opensource_interfaces" />
+  <remove-project name="android_vendor_qcom_opensource_commonsys-intf_display" />
+
+  <project path="vendor/qcom/opensource/commonsys/cryptfs_hw" name="asterixiverz/ProtonAOSP" remote="github" revision="vendor/qcom/opensource/commonsys/cryptfs_hw" />
+  <project path="vendor/qcom/opensource/thermal-hal" name="asterixiverz/ProtonAOSP" remote="github" revision="vendor/qcom/opensource/thermal-hal" />
+  <project path="device/qcom/kernelscripts" name="asterixiverz/ProtonAOSP" remote="github" revision="device/qcom/kernelscripts" >
+    <linkfile dest="vendor/qcom/build/tasks/kernel_definitions.mk" src="kernel_definitions.mk" />
+  </project>
+  <project path="vendor/qcom/opensource/interfaces" name="asterixiverz/ProtonAOSP" remote="github" revision="vendor/qcom/opensource/interfaces" />
+  <project path="vendor/qcom/opensource/data-ipa-cfg-mgr" name="asterixiverz/ProtonAOSP" remote="github" revision="vendor/qcom/opensource/data-ipa-cfg-mgr" />
+  <project path="vendor/qcom/opensource/dataservices" name="asterixiverz/ProtonAOSP" remote="github" revision="vendor/qcom/opensource/dataservices" />
+  <project path="vendor/codeaurora/commonsys/telephony" name="asterixiverz/ProtonAOSP" remote="github" revision="vendor/codeaurora/commonsys/telephony" />
+  <project path="vendor/qcom/opensource/commonsys-intf/display" name="asterixiverz/ProtonAOSP" remote="github" revision="vendor/qcom/opensource/commonsys-intf/display" />
+  <project path="vendor/qcom/opensource/power" name="asterixiverz/ProtonAOSP" remote="github" revision="vendor/qcom/opensource/power" />
+  <project path="vendor/qcom/opensource/vibrator" name="asterixiverz/ProtonAOSP" remote="github" revision="vendor/qcom/opensource/vibrator" />
+
+  <project path="device/xiaomi/fog" name="asterixiverz/ProtonAOSP" remote="github" revision="device/xiaomi/fog" />
+  <project path="device/xiaomi/sm6225-common" name="asterixiverz/ProtonAOSP" remote="github" revision="device/xiaomi/sm6225-common" />
+  <project path="vendor/xiaomi/fog" name="asterixiverz/ProtonAOSP" remote="github" revision="vendor/xiaomi/fog" />
+  <project path="vendor/xiaomi/sm6225-common" name="asterixiverz/ProtonAOSP" remote="github" revision="vendor/xiaomi/sm6225-common" />
+  <project path="kernel/xiaomi/fog" name="asterixiverz/kernel_xiaomi_fog-msm4.19" remote="github" revision="proton" />
+  <project path="device/qcom/sepolicy" name="asterixiverz/ProtonAOSP" remote="github" revision="device/qcom/sepolicy" />
+  <project path="device/qcom/sepolicy_vndr" name="asterixiverz/ProtonAOSP" remote="github" revision="device/qcom/sepolicy_vndr" />
+  <project path="vendor/qcom/opensource/audio-hal/primary-hal" name="asterixiverz/ProtonAOSP" remote="github" revision="vendor/qcom/opensource/audio-hal/primary-hal" />
+  <project path="hardware/qcom/media" name="asterixiverz/ProtonAOSP" revision="hardware/qcom/media" remote="github" />
+  <project path="hardware/qcom/display" name="asterixiverz/ProtonAOSP" revision="hardware/qcom/display" remote="github" />
+  <project path="hardware/qcom/bootctrl" name="asterixiverz/ProtonAOSP" revision="hardware/qcom/bootctrl" remote="github" />
+  <project path="hardware/qcom/gps" name="asterixiverz/ProtonAOSP" revision="hardware/qcom/gps" remote="github" />
+</manifest>

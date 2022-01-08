@@ -19,6 +19,10 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/proton/overlay
 PRODUCT_PACKAGES += \
     NavigationBarNoHintOverlay
 
+# Themes
+PRODUCT_PACKAGES += \
+    AndroidBlackThemeOverlay    
+
 # Framework overlay needs to be a RRO
 PRODUCT_ENFORCE_RRO_TARGETS += framework-res
 

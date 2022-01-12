@@ -194,6 +194,7 @@ public class SecureSettings {
         Settings.Secure.LOCKSCREEN_USE_DOUBLE_LINE_CLOCK,
         Settings.Secure.STATUS_BAR_SHOW_VIBRATE_ICON,
         Settings.Secure.TETHERING_ALLOW_VPN_UPSTREAMS,
-        Settings.Secure.POWER_MENU_HIDE_ON_SECURE
+        Settings.Secure.POWER_MENU_HIDE_ON_SECURE,
+        Settings.Secure.SYSTEM_BLACK_THEME
     };
 }

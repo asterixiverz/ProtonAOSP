@@ -6,9 +6,12 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.lifecycle.LifecycleOwner;
 
+import com.android.customization.model.font.FontManager;
+import com.android.customization.model.font.FontSectionController;
 import com.android.customization.model.grid.GridOptionsManager;
 import com.android.customization.model.grid.GridSectionController;
 import com.android.customization.model.mode.DarkModeSectionController;
+import com.android.customization.model.theme.OverlayManagerCompat;
 import com.android.customization.model.themedicon.ThemedIconSectionController;
 import com.android.customization.model.themedicon.ThemedIconSwitchProvider;
 import com.android.wallpaper.model.CustomizationSectionController;
@@ -54,6 +57,10 @@ public final class DefaultCustomizationSections implements CustomizationSections
         sectionControllers.add(new GridSectionController(
                 GridOptionsManager.getInstance(activity), sectionNavigationController));
 
+        // Font selection section.
+        sectionControllers.add(new FontSectionController(
+                FontManager.getInstance(activity, new OverlayManagerCompat(activity)), sectionNavigationController))
+;
         return sectionControllers;
     }
 }

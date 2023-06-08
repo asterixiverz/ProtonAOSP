@@ -18,9 +18,14 @@
 
 package com.android.internal.util.android;
 
+import android.app.ActivityTaskManager;
 import android.app.Application;
+import android.app.TaskStackListener;
+import android.content.ComponentName;
 import android.content.Context;
+import android.os.Binder;
 import android.os.Build;
+import android.os.Process;
 import android.os.SystemProperties;
 import android.util.Log;
 
@@ -41,6 +46,9 @@ public class PropsHooksUtils {
     public static final String ENABLE_PROP_OPTIONS = "persist.sys.pixelprops.all";
     public static final String ENABLE_GAME_PROP_OPTIONS = "persist.sys.gameprops.enabled";
     public static final String SPOOF_PIXEL_GOOGLE_APPS = "persist.sys.pixelprops.google";
+
+    private static final ComponentName GMS_ADD_ACCOUNT_ACTIVITY = ComponentName.unflattenFromString(
+            "com.google.android.gms/.auth.uiflows.minutemaid.MinuteMaidActivity");
 
     private static final Map<String, Object> propsToChangeMainline;
     private static final Map<String, Object> propsToChangePixelXL;
@@ -151,12 +159,12 @@ public class PropsHooksUtils {
         }
 
         if (packageName.equals("com.google.android.gms")) {
-            setPropValue("TIME", System.currentTimeMillis());
-            if (processName.toLowerCase().contains("unstable") 
-                && SystemProperties.getBoolean(SPOOF_PIXEL_GMS, true)) {
-                spoofBuildGms();
-                return;
+            if (SystemProperties.getBoolean(SPOOF_PIXEL_GMS, true)) {
+                if (shouldTryToCertifyDevice(Application.getProcessName())) {
+                    return;
+                }
             }
+            
             if (!isTensorDevice && (processName.contains("gservice")
                     || processName.contains("learning")
                     || processName.contains("persistent"))) {
@@ -248,6 +256,67 @@ public class PropsHooksUtils {
             return field;
         }
     }
+
+    private static boolean isGmsAddAccountActivityOnTop() {
+        try {
+            final ActivityTaskManager.RootTaskInfo focusedTask =
+                    ActivityTaskManager.getService().getFocusedRootTaskInfo();
+            return focusedTask != null && focusedTask.topActivity != null
+                    && focusedTask.topActivity.equals(GMS_ADD_ACCOUNT_ACTIVITY);
+        } catch (Exception e) {
+            Log.e(TAG, "Unable to get top activity!", e);
+        }
+        return false;
+    }
+
+    private static boolean shouldTryToCertifyDevice(String processName) {
+        if (processName == null || !processName.toLowerCase().contains("unstable")) {
+            return false;
+        }
+
+        setPropValue("TIME", System.currentTimeMillis());
+        
+        final boolean was = isGmsAddAccountActivityOnTop();
+        final TaskStackListener taskStackListener = new TaskStackListener() {
+            @Override
+            public void onTaskStackChanged() {
+                final boolean is = isGmsAddAccountActivityOnTop();
+                if (is ^ was) {
+                    dlog("GmsAddAccountActivityOnTop is:" + is + " was:" + was +
+                            ", killing myself!"); // process will restart automatically later
+                    Process.killProcess(Process.myPid());
+                }
+            }
+        };
+        if (!was) {
+            dlog("Spoofing build for GMS");
+            try {
+                ActivityTaskManager.getService().registerTaskStackListener(taskStackListener);
+            } catch (Exception e) {
+                Log.e(TAG, "Failed to register task stack listener!", e);
+            }
+            spoofBuildGms();
+            return true;
+        } else {
+            dlog("Skip spoofing build for GMS, because GmsAddAccountActivityOnTop");
+            return false;
+        }
+    }
+
+    public static boolean shouldBypassTaskPermission(Context context) {
+        // GMS doesn't have MANAGE_ACTIVITY_TASKS permission
+        final int callingUid = Binder.getCallingUid();
+        final int gmsUid;
+        try {
+            gmsUid = context.getPackageManager().getApplicationInfo("com.google.android.gms", 0).uid;
+            //dlog("shouldBypassTaskPermission: gmsUid:" + gmsUid + " callingUid:" + callingUid);
+        } catch (Exception e) {
+            //Log.e(TAG, "shouldBypassTaskPermission: unable to get gms uid", e);
+            return false;
+        }
+        return gmsUid == callingUid;
+    }
+
     private static void spoofBuildGms() {
         for (Map.Entry<String, String> entry : DEFAULT_VALUES.entrySet()) {
             String propKey = PROP_HOOKS + entry.getKey();

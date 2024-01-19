@@ -213,8 +213,11 @@ persist.vendor.sensors.support_direct_channel=false
 sys.vendor.shutdown.waittime=500
 
 # USB
-vendor.usb.diag.func.name=diag
-vendor.usb.use_ffs_mtp=0
+persist.sys.usb.config=none
+sys.usb.mtp.batchcancel=1
+vendor.usb.diag.func.name=ffs
+vendor.usb.qdss.inst.name=qdss_sw
+vendor.usb.use_ffs_mtp=1
 
 # Wi-Fi
 wifi.aware.interface=wifi-aware0

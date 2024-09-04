@@ -191,6 +191,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libdisplayconfig.qti \
     libdisplayconfig.qti.vendor \
+    libgui_vendor \
     libqdMetaData \
     libsdmcore \
     libsdmutils \

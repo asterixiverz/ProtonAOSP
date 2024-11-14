@@ -78,9 +78,6 @@ TARGET_USES_GRALLOC4 := true
 TARGET_USES_HWC2 := true
 TARGET_USES_ION := true
 
-# DTBO image
-BOARD_KERNEL_SEPARATED_DTBO := true
-
 # FM
 BOARD_HAVE_QCOM_FM := true
 
@@ -96,7 +93,7 @@ TARGET_RECOVERY_DEVICE_MODULES ?= init_xiaomi_bengal
 
 # Kernel
 BOARD_KERNEL_BASE        := 0x00000000
-BOARD_KERNEL_IMAGE_NAME  := Image
+BOARD_KERNEL_IMAGE_NAME  := Image.gz
 BOARD_KERNEL_OFFSET      := 0x00008000
 BOARD_KERNEL_PAGESIZE    := 4096
 BOARD_RAMDISK_OFFSET     := 0x01000000
@@ -116,10 +113,12 @@ BOARD_KERNEL_CMDLINE += \
     service_locator.enable=1 \
     swiotlb=2048
 
-TARGET_FORCE_PREBUILT_KERNEL := true
-TARGET_KERNEL_CONFIG := vendor/bengal_defconfig
-TARGET_KERNEL_HEADERS := kernel/xiaomi/sm6225-common
-TARGET_KERNEL_SOURCE := kernel/xiaomi/sm6225-common
+TARGET_KERNEL_ARCH := arm64
+TARGET_KERNEL_CONFIG := vendor/fog-perf_defconfig
+TARGET_KERNEL_HEADERS := kernel/xiaomi/fog
+TARGET_KERNEL_SOURCE := kernel/xiaomi/fog
+TARGET_KERNEL_CLANG_COMPILE := true
+TARGET_LINUX_KERNEL_VERSION := 4.19
 
 # Media
 TARGET_DISABLED_UBWC := true

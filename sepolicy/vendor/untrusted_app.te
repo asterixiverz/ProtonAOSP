@@ -9,6 +9,5 @@ allow untrusted_app sysfs_msm_subsys:file r_file_perms;
 allow untrusted_app untrusted_app:udp_socket ioctl;
 allow untrusted_app vendor_sysfs_soc:dir { search };
 allow untrusted_app vendor_sysfs_soc:file r_file_perms;
-allow untrusted_app zygote:unix_stream_socket { getopt };
 
 get_prop(untrusted_app, vendor_persist_camera_prop)

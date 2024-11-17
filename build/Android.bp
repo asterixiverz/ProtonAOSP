@@ -31,7 +31,7 @@ surfaceflinger_qcom_extensions {
     soong_config_variables: {
         qcom_um_namespace: {
             cppflags: ["-DQCOM_UM_FAMILY"],
-            header_libs: ["//%s/display:display_intf_headers"],
+            header_libs: ["//%s:display_intf_headers"],
         },
     },
 }

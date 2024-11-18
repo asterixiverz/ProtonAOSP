@@ -43,6 +43,7 @@ MSM_VIDC_TARGET_LIST := \
     apq8084 \
     apq8098_latv \
     atoll \
+    bengal \
     kona \
     lito \
     msm8226 \

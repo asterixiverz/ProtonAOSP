@@ -6,6 +6,7 @@
   <remove-project name="android_vendor_qcom_opensource_interfaces" />
   <remove-project name="android_vendor_qcom_opensource_commonsys-intf_display" />
 
+  <project path="external/json-c" name="asterixiverz/ProtonAOSP" remote="github" revision="external/json-c" />
   <project path="external/tinyxml" name="asterixiverz/ProtonAOSP" remote="github" revision="external/tinyxml" />
 
   <project path="vendor/qcom/opensource/commonsys/cryptfs_hw" name="asterixiverz/ProtonAOSP" remote="github" revision="vendor/qcom/opensource/commonsys/cryptfs_hw" />

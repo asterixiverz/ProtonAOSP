@@ -27,6 +27,7 @@
   <project path="vendor/xiaomi/fog" name="asterixiverz/ProtonAOSP" remote="github" revision="vendor/xiaomi/fog" />
   <project path="vendor/xiaomi/sm6225-common" name="asterixiverz/ProtonAOSP" remote="github" revision="vendor/xiaomi/sm6225-common" />
   <project path="kernel/xiaomi/fog" name="asterixiverz/kernel_xiaomi_fog-msm4.19" remote="github" revision="proton" />
+  <project path="device/proton/sepolicy" name="asterixiverz/ProtonAOSP" remote="github" revision="device/proton/sepolicy" />
   <project path="device/qcom/sepolicy" name="asterixiverz/ProtonAOSP" remote="github" revision="device/qcom/sepolicy" />
   <project path="device/qcom/sepolicy_vndr" name="asterixiverz/ProtonAOSP" remote="github" revision="device/qcom/sepolicy_vndr" />
   <project path="vendor/qcom/opensource/audio-hal/primary-hal" name="asterixiverz/ProtonAOSP" remote="github" revision="vendor/qcom/opensource/audio-hal/primary-hal" />

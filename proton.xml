@@ -17,7 +17,7 @@
 
   <!-- Replace existing repositories -->
   <remove-project name="platform/frameworks/base" />
-  <project name="android_frameworks_base" path="frameworks/base" remote="proton" groups="proton" />
+  <project name="asterixiverz/ProtonAOSP" path="frameworks/base" remote="github" revision="frameworks/base" />
   <remove-project name="platform/libcore" />
   <project name="android_libcore" path="libcore" remote="proton" groups="proton" />
   <remove-project name="platform/build" />

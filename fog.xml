@@ -35,4 +35,6 @@
   <project path="hardware/qcom/display" name="asterixiverz/ProtonAOSP" revision="hardware/qcom/display" remote="github" />
   <project path="hardware/qcom/bootctrl" name="asterixiverz/ProtonAOSP" revision="hardware/qcom/bootctrl" remote="github" />
   <project path="hardware/qcom/gps" name="asterixiverz/ProtonAOSP" revision="hardware/qcom/gps" remote="github" />
+
+  <project path="vendor/proton/signing/keys" name="asterixiverz/vendor_sign" remote="github" revision="proton" />
 </manifest>

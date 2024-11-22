@@ -16,7 +16,7 @@
 -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.arrow.support">
+    package="com.proton.support">
 
     <uses-sdk
         android:minSdkVersion="27" />

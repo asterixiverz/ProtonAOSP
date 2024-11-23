@@ -90,7 +90,7 @@
   <remove-project name="platform/hardware/libhardware" />
 
   <project name="asterixiverz/ProtonAOSP" path="frameworks/base" remote="github" revision="frameworks/base" />
-  <project name="android_libcore" path="libcore" remote="proton" groups="proton" />
+  <project name="asterixiverz/ProtonAOSP" path="libcore" remote="github" revision="libcore" />
   <project name="asterixiverz/ProtonAOSP" path="build/make" remote="github" revision="build/make">
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
@@ -105,7 +105,7 @@
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
   <project name="android_device_common" path="device/common" remote="proton" groups="proton" />
-  <project name="android_art" path="art" remote="proton" groups="proton" />
+  <project name="asterixiverz/ProtonAOSP" path="art" remote="github" revision="art" />
   <project name="asterixiverz/ProtonAOSP" path="system/core" remote="gitea" revision="system/core" />
   <project name="asterixiverz/ProtonAOSP" path="system/sepolicy" remote="github" revision="system/sepolicy" />
   <project name="android_external_noto-fonts" path="external/noto-fonts" remote="proton" groups="proton" />
@@ -113,7 +113,7 @@
   <project name="android_external_google-fonts_cutive-mono" path="external/google-fonts/cutive-mono" remote="proton" groups="proton" />
   <project name="android_packages_apps_ThemePicker" path="packages/apps/ThemePicker" remote="proton" groups="proton" />
   <project name="asterixiverz/ProtonAOSP" path="packages/modules/Connectivity" remote="github" revision="packages/modules/Connectivity" />
-  <project name="android_bionic" path="bionic" remote="proton" groups="proton" />
+  <project name="asterixiverz/ProtonAOSP" path="bionic" remote="github" revision="bionic" />
   <project name="android_packages_apps_WallpaperPicker2" path="packages/apps/WallpaperPicker2" remote="proton" groups="proton" />
   <project name="android_packages_apps_Launcher3" path="packages/apps/Launcher3" remote="proton" groups="proton" />
   <project name="android_packages_apps_SettingsIntelligence" path="packages/apps/SettingsIntelligence" remote="proton" groups="proton" />
@@ -121,7 +121,7 @@
   <project name="asterixiverz/ProtonAOSP" path="frameworks/native" remote="github" revision="frameworks/native" />
   <project name="android_external_jemalloc_new" path="external/jemalloc_new" remote="proton" groups="proton" />
   <project name="asterixiverz/ProtonAOSP" path="packages/modules/Permission" remote="github" revision="packages/modules/Permission" />
-  <project name="android_packages_modules_Wifi" path="packages/modules/Wifi" remote="proton" groups="proton" />
+  <project name="asterixiverz/ProtonAOSP" path="packages/modules/Wifi" remote="github" revision="packages/modules/Wifi" />
   <project name="android_packages_inputmethods_LatinIME" path="packages/inputmethods/LatinIME" remote="proton" groups="proton" />
   <project name="android_packages_apps_Contacts" path="packages/apps/Contacts" remote="proton" groups="proton" />
   <project name="android_packages_apps_Messaging" path="packages/apps/Messaging" remote="proton" groups="proton" />
@@ -148,7 +148,7 @@
   <project name="android_device_google_raviole" path="device/google/raviole" remote="proton" groups="proton" />
   <project name="android_external_armnn" path="external/armnn" remote="proton" groups="proton" />
   <project name="android_external_android-nn-driver" path="external/android-nn-driver" remote="proton" groups="proton" />
-  <project name="android_packages_providers_DownloadProvider" path="packages/providers/DownloadProvider" remote="proton" groups="proton" />
+  <project name="asterixiverz/ProtonAOSP" path="packages/providers/DownloadProvider" remote="github" revision="packages/providers/DownloadProvider" />
   <project name="android_system_vold" path="system/vold" remote="proton" groups="proton" />
   <project name="android_external_libjpeg-turbo" path="external/libjpeg-turbo" remote="proton" groups="proton" />
   <project name="android_packages_modules_DnsResolver" path="packages/modules/DnsResolver" remote="proton" groups="proton" />
@@ -205,7 +205,6 @@
   <project name="android_vendor_lawnicons" path="vendor/lawnicons" remote="proton" groups="proton" />
   <project name="kdrag0n/android_packages_apps_RepainterServicePriv" path="packages/apps/RepainterServicePriv" remote="github" groups="proton" revision="main" />
   <project name="android_vendor_google_devices" path="vendor/google_devices" remote="blobs" groups="proton" />
-  <project name="android_packages_apps_GmsCompat" path="packages/apps/GmsCompat" remote="proton" groups="proton" />
   <project name="android_external_exfatprogs" path="external/exfatprogs" remote="proton" groups="proton" />
   <project name="android_external_rust_crates_base64" path="external/rust/crates/base64" remote="proton" groups="proton" />
   <project name="asterixiverz/ProtonAOSP" path="vendor/support" remote="github" revision="vendor/support" />

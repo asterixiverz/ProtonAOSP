@@ -17,10 +17,80 @@
 
   <!-- Replace existing repositories -->
   <remove-project name="platform/frameworks/base" />
-  <project name="asterixiverz/ProtonAOSP" path="frameworks/base" remote="github" revision="frameworks/base" />
   <remove-project name="platform/libcore" />
-  <project name="android_libcore" path="libcore" remote="proton" groups="proton" />
   <remove-project name="platform/build" />
+  <remove-project name="platform/build/soong" />
+  <remove-project name="device/common" />
+  <remove-project name="platform/art" />
+  <remove-project name="platform/system/core" />
+  <remove-project name="platform/system/sepolicy" />
+  <remove-project name="platform/external/noto-fonts" />
+  <remove-project name="platform/external/roboto-fonts" />
+  <remove-project name="platform/external/google-fonts/cutive-mono" />
+  <remove-project name="platform/packages/apps/ThemePicker" />
+  <remove-project name="platform/packages/modules/Connectivity" />
+  <remove-project name="platform/bionic" />
+  <remove-project name="platform/packages/apps/WallpaperPicker2" />
+  <remove-project name="platform/packages/apps/Launcher3" />
+  <remove-project name="platform/packages/apps/SettingsIntelligence" />
+  <remove-project name="platform/packages/apps/Settings" />
+  <remove-project name="platform/frameworks/native" />
+  <remove-project name="platform/external/jemalloc_new" />
+  <remove-project name="platform/packages/modules/Permission" />
+  <remove-project name="platform/packages/modules/Wifi" />
+  <remove-project name="platform/packages/inputmethods/LatinIME" />
+  <remove-project name="platform/packages/apps/Contacts" />
+  <remove-project name="platform/packages/apps/Messaging" />
+  <remove-project name="platform/packages/apps/DeskClock" />
+  <remove-project name="platform/packages/apps/Dialer" />
+  <remove-project name="platform/packages/apps/Camera2" />
+  <remove-project name="platform/external/openssh" />
+  <remove-project name="device/google/coral-sepolicy" />
+  <remove-project name="device/google/coral" />
+  <remove-project name="device/google/redfin" />
+  <remove-project name="device/google/redbull" />
+  <remove-project name="device/google/redbull-sepolicy" />
+  <remove-project name="device/google/bramble" />
+  <remove-project name="platform/hardware/qcom/sm8150/display" />
+  <remove-project name="platform/hardware/qcom/sm8150/data/ipacfg-mgr" />
+  <remove-project name="platform/hardware/qcom/sm8150/media" />
+  <remove-project name="platform/hardware/qcom/sm7250/display" />
+  <remove-project name="platform/hardware/qcom/sm7250/media" />
+  <remove-project name="device/google/gs101" />
+  <remove-project name="device/google/gs101-sepolicy" />
+  <remove-project name="device/google/raviole" />
+  <remove-project name="platform/external/armnn" />
+  <remove-project name="platform/external/android-nn-driver" />
+  <remove-project name="platform/packages/providers/DownloadProvider" />
+  <remove-project name="platform/system/vold" />
+  <remove-project name="platform/external/libjpeg-turbo" />
+  <remove-project name="platform/packages/modules/DnsResolver" />
+  <remove-project name="platform/system/netd" />
+  <remove-project name="platform/packages/modules/common" />
+  <remove-project name="platform/platform_testing" />
+  <remove-project name="platform/external/rust/crates/futures" />
+  <remove-project name="platform/external/rust/crates/futures-channel" />
+  <remove-project name="platform/external/rust/crates/futures-core" />
+  <remove-project name="platform/external/rust/crates/futures-executor" />
+  <remove-project name="platform/external/rust/crates/futures-io" />
+  <remove-project name="platform/external/rust/crates/futures-macro" />
+  <remove-project name="platform/external/rust/crates/futures-sink" />
+  <remove-project name="platform/external/rust/crates/futures-task" />
+  <remove-project name="platform/external/rust/crates/futures-util" />
+  <remove-project name="platform/external/rust/crates/pin-utils" />
+  <remove-project name="platform/external/rust/crates/proc-macro-nested" />
+  <remove-project name="platform/external/rust/crates/quiche" />
+  <remove-project name="platform/external/rust/crates/ring" />
+  <remove-project name="platform/external/rust/crates/slab" />
+  <remove-project name="platform/external/rust/crates/thiserror" />
+  <remove-project name="platform/external/rust/crates/tokio" />
+  <remove-project name="platform/external/rust/crates/tokio-macros" />
+  <remove-project name="platform/external/rust/crates/tokio-stream" />
+  <remove-project name="platform/external/rust/crates/tokio-test" />
+  <remove-project name="platform/hardware/libhardware" />
+
+  <project name="asterixiverz/ProtonAOSP" path="frameworks/base" remote="github" revision="frameworks/base" />
+  <project name="android_libcore" path="libcore" remote="proton" groups="proton" />
   <project name="asterixiverz/ProtonAOSP" path="build/make" remote="github" revision="build/make">
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
@@ -30,149 +100,80 @@
     <linkfile src="target" dest="build/target" />
     <linkfile src="tools" dest="build/tools" />
   </project>
-  <remove-project name="platform/build/soong" />
   <project name="asterixiverz/ProtonAOSP" path="build/soong" remote="github" revision="build/soong">
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
-  <remove-project name="device/common" />
   <project name="android_device_common" path="device/common" remote="proton" groups="proton" />
-  <remove-project name="platform/art" />
   <project name="android_art" path="art" remote="proton" groups="proton" />
-  <remove-project name="platform/system/core" />
   <project name="asterixiverz/ProtonAOSP" path="system/core" remote="gitea" revision="system/core" />
-  <remove-project name="platform/system/sepolicy" />
   <project name="asterixiverz/ProtonAOSP" path="system/sepolicy" remote="github" revision="system/sepolicy" />
-  <remove-project name="platform/external/noto-fonts" />
   <project name="android_external_noto-fonts" path="external/noto-fonts" remote="proton" groups="proton" />
-  <remove-project name="platform/external/roboto-fonts" />
   <project name="android_external_roboto-fonts" path="external/roboto-fonts" remote="proton" groups="proton" />
-  <remove-project name="platform/external/google-fonts/cutive-mono" />
   <project name="android_external_google-fonts_cutive-mono" path="external/google-fonts/cutive-mono" remote="proton" groups="proton" />
-  <remove-project name="platform/packages/apps/ThemePicker" />
   <project name="android_packages_apps_ThemePicker" path="packages/apps/ThemePicker" remote="proton" groups="proton" />
-  <remove-project name="platform/packages/modules/Connectivity" />
   <project name="asterixiverz/ProtonAOSP" path="packages/modules/Connectivity" remote="github" revision="packages/modules/Connectivity" />
-  <remove-project name="platform/bionic" />
   <project name="android_bionic" path="bionic" remote="proton" groups="proton" />
-  <remove-project name="platform/packages/apps/WallpaperPicker2" />
   <project name="android_packages_apps_WallpaperPicker2" path="packages/apps/WallpaperPicker2" remote="proton" groups="proton" />
-  <remove-project name="platform/packages/apps/Launcher3" />
   <project name="android_packages_apps_Launcher3" path="packages/apps/Launcher3" remote="proton" groups="proton" />
-  <remove-project name="platform/packages/apps/SettingsIntelligence" />
   <project name="android_packages_apps_SettingsIntelligence" path="packages/apps/SettingsIntelligence" remote="proton" groups="proton" />
-  <remove-project name="platform/packages/apps/Settings" />
   <project name="asterixiverz/ProtonAOSP" path="packages/apps/Settings" remote="github" revision="packages/apps/Settings" />
-  <remove-project name="platform/frameworks/native" />
   <project name="asterixiverz/ProtonAOSP" path="frameworks/native" remote="github" revision="frameworks/native" />
-  <remove-project name="platform/external/jemalloc_new" />
   <project name="android_external_jemalloc_new" path="external/jemalloc_new" remote="proton" groups="proton" />
-  <remove-project name="platform/packages/modules/Permission" />
   <project name="asterixiverz/ProtonAOSP" path="packages/modules/Permission" remote="github" revision="packages/modules/Permission" />
-  <remove-project name="platform/packages/modules/Wifi" />
   <project name="android_packages_modules_Wifi" path="packages/modules/Wifi" remote="proton" groups="proton" />
-  <remove-project name="platform/packages/inputmethods/LatinIME" />
   <project name="android_packages_inputmethods_LatinIME" path="packages/inputmethods/LatinIME" remote="proton" groups="proton" />
-  <remove-project name="platform/packages/apps/Contacts" />
   <project name="android_packages_apps_Contacts" path="packages/apps/Contacts" remote="proton" groups="proton" />
-  <remove-project name="platform/packages/apps/Messaging" />
   <project name="android_packages_apps_Messaging" path="packages/apps/Messaging" remote="proton" groups="proton" />
-  <remove-project name="platform/packages/apps/DeskClock" />
   <project name="android_packages_apps_DeskClock" path="packages/apps/DeskClock" remote="proton" groups="proton" />
-  <remove-project name="platform/packages/apps/Dialer" />
   <project name="android_packages_apps_Dialer" path="packages/apps/Dialer" remote="proton" groups="proton" />
-  <remove-project name="platform/packages/apps/Camera2" />
   <project name="android_packages_apps_Camera2" path="packages/apps/Camera2" remote="proton" groups="proton" />
-  <remove-project name="platform/external/openssh" />
   <project name="android_external_openssh" path="external/openssh" remote="proton" groups="proton" />
-  <remove-project name="device/google/coral-sepolicy" />
   <project name="android_device_google_coral-sepolicy" path="device/google/coral-sepolicy" remote="proton" groups="proton" />
-  <remove-project name="device/google/coral" />
   <project name="android_device_google_coral" path="device/google/coral" remote="proton" groups="proton" />
-  <remove-project name="device/google/redfin" />
   <project name="android_device_google_redfin" path="device/google/redfin" remote="proton" groups="proton" />
-  <remove-project name="device/google/redbull" />
   <project name="android_device_google_redbull" path="device/google/redbull" remote="proton" groups="proton" />
-  <remove-project name="device/google/redbull-sepolicy" />
   <project name="android_device_google_redbull-sepolicy" path="device/google/redbull-sepolicy" remote="proton" groups="proton" />
-  <remove-project name="device/google/bramble" />
   <project name="android_device_google_bramble" path="device/google/bramble" remote="proton" groups="proton" />
-  <remove-project name="platform/hardware/qcom/sm8150/display" />
   <project name="android_hardware_qcom_sm8150_display" path="hardware/qcom/sm8150/display" remote="proton" groups="proton" />
-  <remove-project name="platform/hardware/qcom/sm8150/data/ipacfg-mgr" />
   <project name="android_hardware_qcom_sm8150_data_ipacfg-mgr" path="hardware/qcom/sm8150/data/ipacfg-mgr" remote="proton" groups="proton" >
     <linkfile src="os_pickup.mk" dest="hardware/qcom/sm8150/Android.mk" />
     <linkfile src="os_pickup.bp" dest="hardware/qcom/sm8150/Android.bp" />
   </project>
-  <remove-project name="platform/hardware/qcom/sm8150/media" />
   <project name="android_hardware_qcom_sm8150_media" path="hardware/qcom/sm8150/media" remote="proton" groups="proton" />
-  <remove-project name="platform/hardware/qcom/sm7250/display" />
   <project name="android_hardware_qcom_sm7250_display" path="hardware/qcom/sm7250/display" remote="proton" groups="proton" />
-  <remove-project name="platform/hardware/qcom/sm7250/media" />
   <project name="android_hardware_qcom_sm7250_media" path="hardware/qcom/sm7250/media" remote="proton" groups="proton" />
-  <remove-project name="device/google/gs101" />
   <project name="android_device_google_gs101" path="device/google/gs101" remote="proton" groups="proton" />
-  <remove-project name="device/google/gs101-sepolicy" />
   <project name="android_device_google_gs101-sepolicy" path="device/google/gs101-sepolicy" remote="proton" groups="proton" />
-  <remove-project name="device/google/raviole" />
   <project name="android_device_google_raviole" path="device/google/raviole" remote="proton" groups="proton" />
-  <remove-project name="platform/external/armnn" />
   <project name="android_external_armnn" path="external/armnn" remote="proton" groups="proton" />
-  <remove-project name="platform/external/android-nn-driver" />
   <project name="android_external_android-nn-driver" path="external/android-nn-driver" remote="proton" groups="proton" />
-  <remove-project name="platform/packages/providers/DownloadProvider" />
   <project name="android_packages_providers_DownloadProvider" path="packages/providers/DownloadProvider" remote="proton" groups="proton" />
-  <remove-project name="platform/system/vold" />
   <project name="android_system_vold" path="system/vold" remote="proton" groups="proton" />
-  <remove-project name="platform/external/libjpeg-turbo" />
   <project name="android_external_libjpeg-turbo" path="external/libjpeg-turbo" remote="proton" groups="proton" />
-  <remove-project name="platform/packages/modules/DnsResolver" />
   <project name="android_packages_modules_DnsResolver" path="packages/modules/DnsResolver" remote="proton" groups="proton" />
-  <remove-project name="platform/system/netd" />
   <project name="android_system_netd" path="system/netd" remote="proton" groups="proton" />
-  <remove-project name="platform/packages/modules/common" />
   <project name="android_packages_modules_common" path="packages/modules/common" remote="proton" groups="proton" />
-  <remove-project name="platform/platform_testing" />
   <project name="android_platform_testing" path="platform_testing" remote="proton" groups="proton" />
-  <remove-project name="platform/external/rust/crates/futures" />
   <project name="android_external_rust_crates_futures" path="external/rust/crates/futures" remote="proton" groups="proton" />
-  <remove-project name="platform/external/rust/crates/futures-channel" />
   <project name="android_external_rust_crates_futures-channel" path="external/rust/crates/futures-channel" remote="proton" groups="proton" />
-  <remove-project name="platform/external/rust/crates/futures-core" />
   <project name="android_external_rust_crates_futures-core" path="external/rust/crates/futures-core" remote="proton" groups="proton" />
-  <remove-project name="platform/external/rust/crates/futures-executor" />
   <project name="android_external_rust_crates_futures-executor" path="external/rust/crates/futures-executor" remote="proton" groups="proton" />
-  <remove-project name="platform/external/rust/crates/futures-io" />
   <project name="android_external_rust_crates_futures-io" path="external/rust/crates/futures-io" remote="proton" groups="proton" />
-  <remove-project name="platform/external/rust/crates/futures-macro" />
   <project name="android_external_rust_crates_futures-macro" path="external/rust/crates/futures-macro" remote="proton" groups="proton" />
-  <remove-project name="platform/external/rust/crates/futures-sink" />
   <project name="android_external_rust_crates_futures-sink" path="external/rust/crates/futures-sink" remote="proton" groups="proton" />
-  <remove-project name="platform/external/rust/crates/futures-task" />
   <project name="android_external_rust_crates_futures-task" path="external/rust/crates/futures-task" remote="proton" groups="proton" />
-  <remove-project name="platform/external/rust/crates/futures-util" />
   <project name="android_external_rust_crates_futures-util" path="external/rust/crates/futures-util" remote="proton" groups="proton" />
-  <remove-project name="platform/external/rust/crates/pin-utils" />
   <project name="android_external_rust_crates_pin-utils" path="external/rust/crates/pin-utils" remote="proton" groups="proton" />
-  <remove-project name="platform/external/rust/crates/proc-macro-nested" />
   <project name="android_external_rust_crates_proc-macro-nested" path="external/rust/crates/proc-macro-nested" remote="proton" groups="proton" />
-  <remove-project name="platform/external/rust/crates/quiche" />
   <project name="android_external_rust_crates_quiche" path="external/rust/crates/quiche" remote="proton" groups="proton" />
-  <remove-project name="platform/external/rust/crates/ring" />
   <project name="android_external_rust_crates_ring" path="external/rust/crates/ring" remote="proton" groups="proton" />
-  <remove-project name="platform/external/rust/crates/slab" />
   <project name="android_external_rust_crates_slab" path="external/rust/crates/slab" remote="proton" groups="proton" />
-  <remove-project name="platform/external/rust/crates/thiserror" />
   <project name="android_external_rust_crates_thiserror" path="external/rust/crates/thiserror" remote="proton" groups="proton" />
-  <remove-project name="platform/external/rust/crates/tokio" />
   <project name="android_external_rust_crates_tokio" path="external/rust/crates/tokio" remote="proton" groups="proton" />
-  <remove-project name="platform/external/rust/crates/tokio-macros" />
   <project name="android_external_rust_crates_tokio-macros" path="external/rust/crates/tokio-macros" remote="proton" groups="proton" />
-  <remove-project name="platform/external/rust/crates/tokio-stream" />
   <project name="android_external_rust_crates_tokio-stream" path="external/rust/crates/tokio-stream" remote="proton" groups="proton" />
-  <remove-project name="platform/external/rust/crates/tokio-test" />
   <project name="android_external_rust_crates_tokio-test" path="external/rust/crates/tokio-test" remote="proton" groups="proton" />
-  <remove-project name="platform/hardware/libhardware" />
   <project name="asterixiverz/ProtonAOSP" path="hardware/libhardware" remote="github" revision="hardware/libhardware" />
 
   <!-- Add new repositories -->

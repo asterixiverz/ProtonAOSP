@@ -25,7 +25,14 @@ With Google Apps
 ```
 export WITH_GMS=true
 ```
-
+If you build with Google Apps, and want to use Pixel Launcher:
+```
+export PIXEL_LAUNCHER_VARIANT=ammit/horus/khonsu/tawaret (select one)
+export ICONS_VARIANT=acons/cayicons/dgicons/lawnicons/rkicons/teamfilesicons (select one)
+export AOSP_ENHANCER=true (Only if you want that)
+```
+For variants, you can choose one from the list above, the flag above is just a format.
+For more information about Pixel Launcher, [read here](https://docs.google.com/document/d/1F8Ro0OyVr9CIkPQ2BOJASTlb88OpghnQJG4H0rip5yg/edit?tab=t.0#heading=h.jbs18coini1v).
 
 This is a large download that will take approximately 100 GB of disk space, so plan accordingly.
 

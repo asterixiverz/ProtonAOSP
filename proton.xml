@@ -208,4 +208,5 @@
   <project name="android_external_exfatprogs" path="external/exfatprogs" remote="proton" groups="proton" />
   <project name="android_external_rust_crates_base64" path="external/rust/crates/base64" remote="proton" groups="proton" />
   <project name="asterixiverz/ProtonAOSP" path="vendor/support" remote="github" revision="vendor/support" />
+  <project name="asterixiverz/ProtonAOSP" path="vendor/PixelLauncher" remote="github" revision="vendor/PixelLauncher" />
 </manifest>

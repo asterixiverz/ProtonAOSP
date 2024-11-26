@@ -46,6 +46,8 @@ ifeq ($(WITH_GMS),true)
 
 $(call inherit-product, vendor/gapps/common/common-vendor.mk)
 
+$(call inherit-product, vendor/PixelLauncher/PixelLauncher.mk)
+
 # SetupWizard
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.setupwizard.rotation_locked=true \

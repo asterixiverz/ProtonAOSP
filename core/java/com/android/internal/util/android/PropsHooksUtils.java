@@ -93,6 +93,11 @@ public class PropsHooksUtils {
     }
 
     public static void setProps(Context context) {
+
+        if (!SystemProperties.getBoolean(ENABLE_PROP_OPTIONS, true)) {
+            return;
+        }
+
         String packageName = context.getPackageName();
 
         if (packageName == null || packageName.isEmpty()) {
@@ -100,10 +105,6 @@ public class PropsHooksUtils {
         }
         
         setGameProps(packageName);
-
-        if (!SystemProperties.getBoolean(ENABLE_PROP_OPTIONS, true)) {
-            return;
-        }
 
         boolean isPixelDevice = SystemProperties.get("ro.soc.manufacturer").equalsIgnoreCase("Google");
         String model = SystemProperties.get("ro.product.model");

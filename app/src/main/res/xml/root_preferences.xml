@@ -32,7 +32,7 @@
             android:summary="@string/heads_up_disabled_summary"
             android:title="@string/heads_up_disabled_title" />
 
-        <com.arrow.support.preferences.SystemSettingSwitchPreference
+        <com.proton.support.preferences.SystemSettingSwitchPreference
             android:key="gamespace_suppress_fullscreen_intent"
             android:summary="@string/suppress_fullscreen_intent_summary"
             android:title="@string/suppress_fullscreen_intent_title"
@@ -75,7 +75,7 @@
             android:summary="@string/lock_gesture_summary"
             android:title="@string/lock_gesture_title" />
 
-        <com.arrow.support.preferences.CustomSeekBarPreference
+        <com.proton.support.preferences.CustomSeekBarPreference
             android:key="gamespace_menu_opacity"
             android:title="@string/gamespace_menu_opacity_title"
             android:defaultValue="90"

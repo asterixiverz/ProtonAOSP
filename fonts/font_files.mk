@@ -35,6 +35,8 @@ PRODUCT_PACKAGES += \
     NotoSerif-Bold.ttf \
     NotoSerif-Italic.ttf \
     NotoSerif-Regular.ttf \
+    GoogleSans-Italic.ttf \
+    GoogleSans-Regular.ttf \
 
 # Register new fonts
 PRODUCT_COPY_FILES += \

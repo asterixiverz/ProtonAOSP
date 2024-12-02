@@ -33,3 +33,5 @@ PRODUCT_PACKAGES += \
     FontSourceSansOverlay \
     FontSourceSerifOverlay \
     FontHarmonyOSSansOverlay \
+    FontGoogleSansOverlay \
+    FontGoogleSansLatoOverlay \

@@ -24,6 +24,10 @@ PRODUCT_PACKAGES += \
     NoCutoutOverlay \
     AvoidAppsInCutoutOverlay \
 
+# Themes
+PRODUCT_PACKAGES += \
+    AndroidBlackThemeOverlay \
+
 # 2-button gesture navigation
 PRODUCT_PACKAGES += \
     NavigationBarMode2ButtonOverlay \

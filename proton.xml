@@ -88,6 +88,8 @@
   <remove-project name="platform/external/rust/crates/tokio-stream" />
   <remove-project name="platform/external/rust/crates/tokio-test" />
   <remove-project name="platform/hardware/libhardware" />
+  <remove-project name="platform/system/update_engine" />
+  <remove-project name="platform/packages/apps/Nfc" />
 
   <project name="asterixiverz/ProtonAOSP" path="frameworks/base" remote="github" revision="frameworks/base" />
   <project name="asterixiverz/ProtonAOSP" path="libcore" remote="github" revision="libcore" />
@@ -175,6 +177,8 @@
   <project name="android_external_rust_crates_tokio-stream" path="external/rust/crates/tokio-stream" remote="proton" groups="proton" />
   <project name="android_external_rust_crates_tokio-test" path="external/rust/crates/tokio-test" remote="proton" groups="proton" />
   <project name="asterixiverz/ProtonAOSP" path="hardware/libhardware" remote="github" revision="hardware/libhardware" />
+  <project name="asterixiverz/ProtonAOSP" path="system/update_engine" remote="github" revision="system/update_engine" />
+  <project name="asterixiverz/ProtonAOSP" path="packages/apps/Nfc" remote="github" revision="packages/apps/Nfc" />
 
   <!-- Add new repositories -->
   <project name="asterixiverz/ProtonAOSP" path="vendor/proton" remote="github" revision="vendor/proton" />

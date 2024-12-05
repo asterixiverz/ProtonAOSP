@@ -90,6 +90,7 @@
   <remove-project name="platform/hardware/libhardware" />
   <remove-project name="platform/system/update_engine" />
   <remove-project name="platform/packages/apps/Nfc" />
+  <remove-project name="platform/frameworks/av" />
 
   <project name="asterixiverz/ProtonAOSP" path="frameworks/base" remote="github" revision="frameworks/base" />
   <project name="asterixiverz/ProtonAOSP" path="libcore" remote="github" revision="libcore" />
@@ -179,6 +180,7 @@
   <project name="asterixiverz/ProtonAOSP" path="hardware/libhardware" remote="github" revision="hardware/libhardware" />
   <project name="asterixiverz/ProtonAOSP" path="system/update_engine" remote="github" revision="system/update_engine" />
   <project name="asterixiverz/ProtonAOSP" path="packages/apps/Nfc" remote="github" revision="packages/apps/Nfc" />
+  <project name="asterixiverz/ProtonAOSP" path="frameworks/av" remote="github" revision="frameworks/av" />
 
   <!-- Add new repositories -->
   <project name="asterixiverz/ProtonAOSP" path="vendor/proton" remote="github" revision="vendor/proton" />

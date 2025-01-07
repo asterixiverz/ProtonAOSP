@@ -63,6 +63,12 @@
         <intent android:action="android.intent.action.MANAGE_PERMISSIONS"/>
     </Preference>
 
+    <Preference
+        android:key="spoofing"
+        android:title="@string/spoofing_title"
+        android:summary="@string/spoofing_summary"
+        android:fragment="com.android.settings.privacy.SettingsSpoof" />
+
     <!-- Camera toggle -->
     <com.android.settingslib.RestrictedSwitchPreference
         android:key="privacy_camera_toggle"

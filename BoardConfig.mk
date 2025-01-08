@@ -20,7 +20,6 @@ TARGET_RECOVERY_DEVICE_MODULES := init_xiaomi_fog
 # Kernel
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
 TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb.img
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
 
 # OTA assert
 TARGET_OTA_ASSERT_DEVICE := fog,rain,wind
